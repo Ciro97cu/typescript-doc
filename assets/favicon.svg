@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <rect width="256" height="256" rx="22" fill="#3178c6"/>
+  <text x="232" y="214" text-anchor="end"
+        font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+        font-weight="700" font-size="118" fill="#ffffff">TS</text>
+</svg>
