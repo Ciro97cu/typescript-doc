@@ -1,0 +1,7 @@
+# Materiale di build interno (note sorgente, style guide) — non pubblicato
+.build/
+
+# Sistema
+.DS_Store
+node_modules/
+*.log

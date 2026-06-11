@@ -1,0 +1,316 @@
+/* ============================================================
+   TypeScript Guide — tema personalizzato
+   Brand TypeScript: blu #3178c6. Tema chiaro + scuro.
+   Override del tema "vue" di docsify.
+   ============================================================ */
+
+:root {
+  --ts-blue: #3178c6;
+  --ts-blue-dark: #235a97;
+  --ts-blue-light: #4a90d9;
+
+  --theme-color: var(--ts-blue);
+
+  --bg: #ffffff;
+  --bg-soft: #f6f8fa;
+  --text: #24292f;
+  --text-soft: #57606a;
+  --border: #e4e8ec;
+  --sidebar-bg: #fafbfc;
+  --code-bg: #f3f5f7;
+  --code-inline-bg: #eef1f4;
+  --code-inline-text: #1f6feb;
+  --link: var(--ts-blue);
+  --quote-bg: #eef4fb;
+  --quote-border: var(--ts-blue);
+  --details-bg: #f6f8fa;
+  --details-border: #e4e8ec;
+  --table-head-bg: #eef1f4;
+}
+
+html.dark {
+  --bg: #0d1117;
+  --bg-soft: #161b22;
+  --text: #c9d1d9;
+  --text-soft: #8b949e;
+  --border: #21262d;
+  --sidebar-bg: #0b0f14;
+  --code-bg: #161b22;
+  --code-inline-bg: #1c2330;
+  --code-inline-text: #79c0ff;
+  --link: #58a6ff;
+  --quote-bg: #11203a;
+  --quote-border: #3178c6;
+  --details-bg: #11161d;
+  --details-border: #21262d;
+  --table-head-bg: #161b22;
+  --theme-color: #58a6ff;
+}
+
+/* ---------- Base ---------- */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+.markdown-section {
+  max-width: 860px;
+}
+
+.markdown-section p,
+.markdown-section li {
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.content,
+.markdown-section {
+  color: var(--text);
+}
+
+/* ---------- Titoli ---------- */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4 {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.markdown-section h1 {
+  border-bottom: 3px solid var(--ts-blue);
+  padding-bottom: 0.3em;
+}
+
+.markdown-section h2 {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.25em;
+  margin-top: 2.2rem;
+}
+
+.markdown-section a {
+  color: var(--link);
+  font-weight: 600;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+}
+
+.sidebar-nav {
+  line-height: 1.9;
+}
+
+.sidebar ul li a {
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.sidebar ul li a:hover {
+  color: var(--ts-blue);
+}
+
+.sidebar-nav > ul > p,
+.sidebar-nav strong {
+  color: var(--text);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 1rem;
+  display: block;
+}
+
+.sidebar-nav li.active > a {
+  color: var(--ts-blue);
+  border-right: 3px solid var(--ts-blue);
+  font-weight: 700;
+}
+
+.app-name-link {
+  color: var(--ts-blue) !important;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.sidebar .app-name {
+  margin-top: 1.2rem;
+}
+
+/* ---------- Codice ---------- */
+.markdown-section code {
+  background: var(--code-inline-bg);
+  color: var(--code-inline-text);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: "SF Mono", "Fira Code", Menlo, Consolas, monospace;
+  font-size: 0.85em;
+}
+
+.markdown-section pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.markdown-section pre > code {
+  background: transparent;
+  color: var(--text);
+  font-size: 0.86em;
+}
+
+/* ---------- Citazioni / note ---------- */
+.markdown-section blockquote {
+  background: var(--quote-bg);
+  border-left: 4px solid var(--quote-border);
+  border-radius: 0 6px 6px 0;
+  color: var(--text);
+  padding: 0.6em 1em;
+}
+
+.markdown-section blockquote p {
+  color: var(--text);
+}
+
+/* ---------- Tabelle ---------- */
+.markdown-section table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.markdown-section tr {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.markdown-section th {
+  background: var(--table-head-bg);
+  color: var(--text);
+}
+
+.markdown-section td,
+.markdown-section th {
+  border: 1px solid var(--border);
+}
+
+/* ---------- Quiz collassabili (<details>) ---------- */
+.markdown-section details {
+  background: var(--details-bg);
+  border: 1px solid var(--details-border);
+  border-left: 4px solid var(--ts-blue);
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  margin: 0.8em 0;
+}
+
+.markdown-section details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+  outline: none;
+}
+
+.markdown-section details[open] summary {
+  margin-bottom: 0.6em;
+  color: var(--ts-blue);
+}
+
+/* ---------- Ricerca ---------- */
+.search input {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.search .results-panel {
+  background: var(--bg);
+}
+
+.search h2,
+.search .matching-post h2 {
+  color: var(--ts-blue);
+}
+
+.search p {
+  color: var(--text-soft);
+}
+
+/* ---------- Paginazione ---------- */
+.docsify-pagination-container {
+  border-top: 1px solid var(--border);
+  color: var(--text-soft);
+}
+
+.pagination-item-label,
+.pagination-item-title {
+  color: var(--ts-blue);
+}
+
+/* ---------- Copy code ---------- */
+.docsify-copy-code-button {
+  background: var(--ts-blue) !important;
+  color: #fff !important;
+}
+
+/* ---------- Coverpage ---------- */
+section.cover {
+  background: linear-gradient(135deg, #235a97 0%, #3178c6 60%, #4a90d9 100%) !important;
+}
+
+section.cover .cover-main > p,
+section.cover .cover-main > h1,
+section.cover .cover-main blockquote p {
+  color: #ffffff;
+}
+
+section.cover .cover-main > p a {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+section.cover .cover-main > p a:hover {
+  background: #ffffff;
+  color: var(--ts-blue);
+}
+
+section.cover.show ~ .sidebar,
+section.cover.show ~ .content {
+  display: none;
+}
+
+/* ---------- Pulsante toggle tema ---------- */
+#theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text);
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.08);
+  background: var(--ts-blue);
+}
+
+@media (max-width: 768px) {
+  #theme-toggle {
+    top: 10px;
+    right: 56px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
